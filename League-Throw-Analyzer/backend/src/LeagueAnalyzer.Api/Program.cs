@@ -1,8 +1,11 @@
-using DotNetEnv;
-
 Env.Load();
 
 var builder = WebApplication.CreateBuilder(args);
+
+var apiKey = Environment.GetEnvironmentVariable("RIOT_API_KEY")
+    ?? throw new InvalidOperationException("RIOT_API_KEY environment variable not set");
+
+builder.Services.AddScoped<IRiotApiService>(_ => new RiotApiService(apiKey));
 
 builder.Services.AddControllers();
 builder.Services.AddCors(options =>
@@ -13,7 +16,6 @@ builder.Services.AddCors(options =>
             .AllowAnyHeader());
 });
 
-//TODO REMINDER FIX THIS NOT RIGHT JUST TO BE var APP
 var app = builder.Build();
 
 app.UseCors("AllowFrontend");

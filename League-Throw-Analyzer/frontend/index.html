@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeagueAnalyzer</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <div id="Page-Wrapper" class="Wrappers">
+        <div id="Search-Page-Wrapper" class="Wrappers">
+            <div id="Header-Area-Search" class="Header-Areas">
+                <h1 id="Main-Header">League Throw Analyzer</h1>
+            </div>
+
+            <div id="Search-Area" class="Body-Areas">
+                <img id="League-Icon" class="Images" src="assets/LoL-Symbol.png" alt="League Of Legends Icon" />
+                <div id="Input-Container" class="Containers">
+                    <input id="Summoner-Input" type="text" placeholder="Enter Game Name + #Tag">
+                    <input id="Summoner-Submit" type="submit" value="Find Summoner" onclick="SubmitSummoner()">
+                </div>
+            </div>
+        </div>
+
+        <div id="Loading-Page-Wrapper" class="Wrappers">
+            <div id="Header-Area-Loading" class="Header-Areas">
+                <h1 id="Loading-Header">Loading</h1>
+            </div>
+        </div>
+
+        <div id="Summoner-Page-Info-Wrapper" class="Wrappers">
+            <div class="Header-Container">
+                <div id="Header-Area-Info" class="Header-Areas">
+                    <img id="Summoner-Icon" class="Images" src="assets/Khazix-Summoner-Icon-Placeholder.jpg" alt="Summoner Icon">
+                    <h1 id="Summoner-Info-Header" class="Image-Headers">BBonkk#Bonk</h1>
+                </div>
+                <nav class="Nav-Right">
+                    <button class="nav-btn" onclick="ReturnHome()">Home</button>
+                </nav>
+            </div>
+            <!-- !This is not scaleable at this point is very cooked -->
+            <!-- !This will show a list of matches up to last 5 ish -->
+            <div id="Info-Area">
+                <div id="Match-Containers" class="Body-Areas">
+                    <!-- !PLACE HOLDER -->
+                    <img id="Champion-Icon" class="Images" src="assets/Khazix-Icon-Placeholder.jpg" alt="Champion Icon">
+                    <img id="Summoner-Role" class="Images" src="assets/Jungle-Summoner-Role-Placeholder.png" alt="Summoner roll for game played">
+                    <div class="Info-Containers">
+                        <span class="result-badge victory badge-center">VICTORY</span>
+                        <table class="Info-Tables">
+                            <tr>
+                                <td>Duration: 20:11</td>
+                                <td>CS: 180</td>
+                                <td>KDA: 1/0/11</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+    <!-- !ALL PLACEHOLDER MAKE WITH JS -->
+    <div id="Match-Info-Wrapper" class="Wrappers">
+
+    <div class="Header-Container">
+        <div id="Header-Area-Match" class="Header-Areas">
+            <img id="Match-Champion-Icon" class="Images" src="assets/Khazix-Icon-Placeholder.jpg" alt="Match Champion Icon">
+            <h1 id="Match-Info-Header" class="Image-Headers">Match Overview</h1>
+        </div>
+        <nav class="Nav-Right">
+            <button class="nav-btn" onclick="ReturnToSummoner()">Back to Summoner</button>
+            <button class="nav-btn" onclick="ReturnHome()">Home</button>
+        </nav>
+    </div>
+
+    <h2 class="result-badge victory badge-center">VICTORY</h2>
+
+    <div id="Match-Info-Area" class="Body-Areas">
+        <img id="League-Minimap" src="assets/League-Minimap.jpg" alt="League Minimap">
+        <div class="Info-Containers">
+            <table class="Info-Tables">
+                <tr>
+                    <td>Duration:</td>
+                    <td>28:42</td>
+                </tr>
+                <tr>
+                    <td>Champion:</td>
+                    <td>Kha'Zix</td>
+                </tr>
+                <tr>
+                    <td>KDA:</td>
+                    <td>8 / 2 / 6</td>
+                </tr>
+                <tr>
+                    <td>CS:</td>
+                    <td>187 (6.5/min)</td>
+                </tr>
+                <tr>
+                    <td>Vision Score:</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>Damage Dealt:</td>
+                    <td>24,310</td>
+                </tr>
+                <tr>
+                    <td>Gold Earned:</td>
+                    <td>14,850</td>
+                </tr>
+                <tr>
+                    <td>Kill Participation:</td>
+                    <td>73%</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

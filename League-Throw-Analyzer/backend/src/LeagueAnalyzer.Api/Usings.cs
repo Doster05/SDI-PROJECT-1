@@ -1,3 +1,5 @@
+global using DotNetEnv;
+
 global using System;
 global using System.Linq;
 global using System.Collections.Generic;
@@ -18,5 +20,8 @@ global using Microsoft.Extensions.Configuration;
 global using System.Diagnostics;
 global using System.Security.Cryptography;
 global using System.IO;
-global using DotNetEnv;
 global using LiteDB;
+
+global using RiotSharp;
+global using RiotSharp.Interfaces;
+global using LeagueAnalyzer.Api.Services;
